@@ -132,7 +132,7 @@ function EnviarMensajeWhastpapp(texto,number){
         body : data,
         headers : {
             "Content-Type" : "application/json",
-            Authorization :"Bearer EAATamVJnZAssBAFq6e4HgPu2bZChZCZC6o1IZCVmYZBcHLRkLVgj0OcbR6j5mNG6zYtUQZBNIfvJZCZBERcdEfrdautqnjRsey3w6VIpN59Gjua0ASORJk5uBDmhRVfjpEdgXimrkcZBad1vUMcu94ZCtSBl8dQSeIRp3fwETAcwqifZCemSLE6kXvuihdsp8TICxqVjNAdgvqq74RAv91adseft"
+            Authorization :"Bearer EAASsECeG2AkBO375xX4pEzGnIHoEPpI0LevGLbe3ZAj05oH4oSeAvGFwusdvyZBrvF6p7AYskZCqdJRd9kvlkYPCFykQ9o3BTz1Ta2dzZBMODHBlLCloUOyRKhKR6XDA06uqG5BESJTBM6Q9DmDoBlc7ttHIzQcJRPQK2l3LiLZBXAGLOYCpxlzsCaPCsFZB1UtLrZBvyHgln3yO0hnHPwZD"
         }
     };
 

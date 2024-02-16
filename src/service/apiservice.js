@@ -3,6 +3,8 @@ const https = require("https");
 function EnviarMensajeWhastpapp(texto,number){
 
     texto = texto.toLowerCase();
+    console.log("ingreso")
+    console.log("ingreso")
 
     if (texto.includes("hola")){
         var data = JSON.stringify({

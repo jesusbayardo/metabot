@@ -31,7 +31,7 @@ const users = new Keyv();
  console.log(currentUser);
 
     if (!currentUser) {
-         users.set(message.from, ["root"], ttl);
+         users.set(number, ["root"], ttl);
      
 
          var data = JSON.stringify({

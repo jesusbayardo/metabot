@@ -14,6 +14,14 @@ function EnviarMensajeWhastpapp(objetoMensaje){
 
 
     texto = texto.toLowerCase();
+    let currentUser =  users.get(number)
+    if (!currentUser) {
+        console.log("no existe")
+    }else{
+        console.log("existe")
+    }
+
+
 
     if (texto.includes("hola")){
         var data = JSON.stringify({

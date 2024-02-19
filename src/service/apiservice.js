@@ -7,7 +7,7 @@ const users = new Keyv();
 
 function EnviarMensajeWhastpapp(objetoMensaje){
    
-    console.log(objetoMensaje);
+
     var messages = objetoMensaje[0];
 
     var texto = messages["text"]["body"];
@@ -16,7 +16,6 @@ function EnviarMensajeWhastpapp(objetoMensaje){
 
     texto = texto.toLowerCase();
     let currentUser =  users.get(number);
-    console.log(datamessages ["root"]);
     if (!currentUser) {
         console.log("NO existe")
          users.set(message.from, ["root"], ttl);

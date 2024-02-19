@@ -16,8 +16,8 @@ function EnviarMensajeWhastpapp(objetoMensaje){
 
     texto = texto.toLowerCase();
     let currentUser =  users.get(number);
-    console.log("------------")
-    console.log(currentUser)
+    console.log("------------");
+    console.log(currentUser);
     if (!currentUser) {
         console.log("NO existe")
          users.set(message.from, ["root"], ttl);

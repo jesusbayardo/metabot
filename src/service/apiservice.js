@@ -1,6 +1,7 @@
 const https = require("https");
 const Keyv = require("keyv");
 const ttl = 180000;
+const data = require("./data");
 const users = new Keyv();
 
 
@@ -24,16 +25,7 @@ function EnviarMensajeWhastpapp(objetoMensaje){
 
 
     if (texto.includes("hola")){
-        var data = JSON.stringify({
-            "messaging_product": "whatsapp",
-            "recipient_type": "individual",
-            "to": number,
-            "type": "text",
-            "text": {
-                "preview_url": false,
-                "body": "🚀 Hola, Como estas, Bienvenido."
-            }
-        });
+        var data = data.messages;
     }else if (texto=="1"){
         var data = JSON.stringify({
             "messaging_product": "whatsapp",

@@ -10,6 +10,6 @@ app.use(express.json());
 app.use("/api",apiruta);
 
 app.listen(PORT,() => {
-    console.log("Hola AnderCode v1 el puerto es :" + PORT);
+    console.log("puerto de acceso" + PORT);
 })
 

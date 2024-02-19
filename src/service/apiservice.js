@@ -1,10 +1,12 @@
 const https = require("https");
 
+const ttl = 180000;
+const users = new Keyv();
+
+
 function EnviarMensajeWhastpapp(texto,number){
 
     texto = texto.toLowerCase();
-    console.log("ingreso")
-    console.log("ingreso")
 
     if (texto.includes("hola")){
         var data = JSON.stringify({
@@ -134,7 +136,7 @@ function EnviarMensajeWhastpapp(texto,number){
         body : data,
         headers : {
             "Content-Type" : "application/json",
-            Authorization :"Bearer EAASsECeG2AkBO375xX4pEzGnIHoEPpI0LevGLbe3ZAj05oH4oSeAvGFwusdvyZBrvF6p7AYskZCqdJRd9kvlkYPCFykQ9o3BTz1Ta2dzZBMODHBlLCloUOyRKhKR6XDA06uqG5BESJTBM6Q9DmDoBlc7ttHIzQcJRPQK2l3LiLZBXAGLOYCpxlzsCaPCsFZB1UtLrZBvyHgln3yO0hnHPwZD"
+            Authorization :"Bearer EAASsECeG2AkBOxYZCq8ogj7dFoE7ZBS4A0ZCUPa6RHj90JmqbbFPKOZAs8BQOhtExUZBMMt4wfOJUL1RQFFZCerTJiSZBST9cZBjSJrrdkPQZAEzeluf3VAxNzSTT7MbZCRbS31XKOOZCTE4rZAB1zMNGP32d3wamUV4h3BJXdDKZC0EU9KEm2mA17WkPNY4FpvvY7kZC9SNC5mArJElRTxvtSZAQUZD"
         }
     };
 

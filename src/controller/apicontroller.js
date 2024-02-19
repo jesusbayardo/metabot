@@ -26,6 +26,7 @@ const recibir = (req, res) => {
         var objetoMensaje = value["messages"];
 
         if (typeof objetoMensaje != "undefined"){
+            console.log(objetoMensaje);
             var messages = objetoMensaje[0];
 
             var texto = messages["text"]["body"];

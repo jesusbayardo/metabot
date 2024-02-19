@@ -18,6 +18,7 @@ function EnviarMensajeWhastpapp(objetoMensaje){
     let currentUser =  users.get(number);
     console.log(datamessages ["root"]);
     if (!currentUser) {
+        console.log("NO existe")
          users.set(message.from, ["root"], ttl);
      
 

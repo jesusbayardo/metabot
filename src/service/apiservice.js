@@ -1,12 +1,12 @@
 const https = require("https");
 const Keyv = require("keyv");
 const ttl = 180000;
-const data = require("../controller/messages");
+
 const users = new Keyv();
 
 
 function EnviarMensajeWhastpapp(objetoMensaje){
-
+    var data = require("../controller/messages");
     console.log(objetoMensaje);
     var messages = objetoMensaje[0];
 

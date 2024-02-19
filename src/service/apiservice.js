@@ -17,6 +17,7 @@ function EnviarMensajeWhastpapp(objetoMensaje){
     texto = texto.toLowerCase();
     let currentUser =  users.get(number)
     if (!currentUser) {
+         users.set(message.from, ["root"], ttl);
         var data = JSON.stringify({
             "messaging_product": "whatsapp",
             "recipient_type": "individual",

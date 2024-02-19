@@ -3,10 +3,10 @@ const Keyv = require("keyv");
 const ttl = 180000;
 
 const users = new Keyv();
-
+ var data = require("../controller/messages");
 
 function EnviarMensajeWhastpapp(objetoMensaje){
-    var data = require("../controller/messages");
+   
     console.log(objetoMensaje);
     var messages = objetoMensaje[0];
 
@@ -30,7 +30,7 @@ function EnviarMensajeWhastpapp(objetoMensaje){
             "recipient_type": "individual",
             "to": number,
             "type": "text",
-            "text": {data.root.messages }
+            "text": {data.root.messages[0] }
         });
     }else if (texto=="1"){
         var data = JSON.stringify({

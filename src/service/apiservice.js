@@ -1,7 +1,7 @@
 const https = require("https");
 const Keyv = require("keyv");
 const ttl = 180000;
-const data = require("./messages");
+const data = require(".controller/messages");
 const users = new Keyv();
 
 

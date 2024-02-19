@@ -30,7 +30,7 @@ function EnviarMensajeWhastpapp(objetoMensaje){
             "recipient_type": "individual",
             "to": number,
             "type": "text",
-            "text": {data['root'].messages[0] }
+            "text":data['root'].messages[0] 
         });
     }else if (texto=="1"){
         var data = JSON.stringify({

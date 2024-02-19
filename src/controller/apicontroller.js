@@ -26,13 +26,9 @@ const recibir = (req, res) => {
         var objetoMensaje = value["messages"];
 
         if (typeof objetoMensaje != "undefined"){
-            console.log(objetoMensaje);
-            var messages = objetoMensaje[0];
+           
 
-            var texto = messages["text"]["body"];
-            var numero = messages["from"];
-
-            enviarmensaje.EnviarMensajeWhastpapp(texto,numero);
+            enviarmensaje.EnviarMensajeWhastpapp(objetoMensaje);
         }
 
         res.send("EVENT_RECEIVED");

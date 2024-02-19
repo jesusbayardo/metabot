@@ -1,10 +1,17 @@
 const https = require("https");
-
+const Keyv = require("keyv");
 const ttl = 180000;
 const users = new Keyv();
 
 
-function EnviarMensajeWhastpapp(texto,number){
+function EnviarMensajeWhastpapp(objetoMensaje){
+
+    console.log(objetoMensaje);
+    var messages = objetoMensaje[0];
+
+    var texto = messages["text"]["body"];
+    var number = messages["from"];
+
 
     texto = texto.toLowerCase();
 

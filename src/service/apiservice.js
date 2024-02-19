@@ -17,14 +17,6 @@ function EnviarMensajeWhastpapp(objetoMensaje){
     texto = texto.toLowerCase();
     let currentUser =  users.get(number)
     if (!currentUser) {
-        console.log("no existe")
-    }else{
-        console.log("existe")
-    }
-
-
-
-    if (texto.includes("hola")){
         var data = JSON.stringify({
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
@@ -32,7 +24,13 @@ function EnviarMensajeWhastpapp(objetoMensaje){
             "type": "text",
             "text":data['root'].messages[0] 
         });
-    }else if (texto=="1"){
+    }else{
+        console.log("existe")
+    }
+
+
+
+    if (texto=="1"){
         var data = JSON.stringify({
             "messaging_product": "whatsapp",
             "recipient_type": "individual",

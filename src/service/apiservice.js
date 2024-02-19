@@ -3,7 +3,7 @@ const Keyv = require("keyv");
 const ttl = 180000;
 
 const users = new Keyv();
- var data = require("../controller/messages");
+ var datamessages = require("../controller/messages");
 
 function EnviarMensajeWhastpapp(objetoMensaje){
    
@@ -15,10 +15,11 @@ function EnviarMensajeWhastpapp(objetoMensaje){
 
 
     texto = texto.toLowerCase();
-    let currentUser =  users.get(number)
+    let currentUser =  users.get(number);
+    console.log(datamessages ["root"]);
     if (!currentUser) {
          users.set(message.from, ["root"], ttl);
-       
+     
 
          var data = JSON.stringify({
             "messaging_product": "whatsapp",

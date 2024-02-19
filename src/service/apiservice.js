@@ -25,7 +25,13 @@ function EnviarMensajeWhastpapp(objetoMensaje){
 
 
     if (texto.includes("hola")){
-         data = data.root.messages;
+        var data = JSON.stringify({
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "text",
+            "text": {data.messages }
+        });
     }else if (texto=="1"){
         var data = JSON.stringify({
             "messaging_product": "whatsapp",

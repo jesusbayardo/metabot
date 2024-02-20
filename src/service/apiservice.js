@@ -30,7 +30,7 @@ const users = new Keyv();
  console.log("----");
  console.log(currentUser);
 
-    if (!currentUser) {
+    if (currentUser ==undefined) {
          users.set(number, ["root"], ttl);
      
 
@@ -38,10 +38,22 @@ const users = new Keyv();
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
             "to": number,
-            "type": "text",
-            "text": {
-                "preview_url": false,
-                "body": "🚀 Hola, visita mi web anderson-bastidas.com para mas información.\n \n📌Por favor, ingresa un numero #️⃣ para recibir información.\n \n1️⃣. Información del Curso. ❔\n2️⃣. Ubicación del local. 📍\n3️⃣. Enviar temario en pdf. 📄\n4️⃣. Audio explicando curso. 🎧\n5️⃣. Video de Introducción. ⏯️\n6️⃣. Hablar con AnderCode. 🙋‍♂️\n7️⃣. Horario de Atención. 🕜"
+            "type": "interactive",
+            "interactive": {
+                "type": "list",
+                "list": [
+                    {
+                        "title": "Consulta de Saldos ❔",
+                        "description": "Obtener información sobre saldos.",
+                        "payload": "consulta_saldos"
+                    },
+                    {
+                        "title": "Ubicación del local. 📍",
+                        "description": "Ver la ubicación de nuestro local.",
+                        "payload": "ubicacion_local"
+                    },
+                    // Add more button options as needed
+                ]
             }
         });
 

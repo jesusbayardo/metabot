@@ -32,31 +32,53 @@ const users = new Keyv();
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
             "to": number,
-            "type": "interactive",
-            "interactive": {
-                "type": "button",
-                "button": {
-                    "text": "🚀 Hola, sou artisan! Tú asistente digital de la Cooperativa Artesanos.\n \n📌Por favor, ingresa un numero #️⃣ para recibir información.",
-                    "buttons": [
-                        {
-                            "type": "text",
-                            "text": "Consulta de Saldos ❔",
-                            "payload": "consulta_saldos"
-                        },
-                        {
-                            "type": "text",
-                            "text": "Ubicación del local. 📍",
-                            "payload": "ubicacion_local"
-                        },
-                        // Add more button options as needed
-                    ]
-                }
+            "type": "template",
+            "template": {
+                "template_type": "button",
+                "text": "🚀 Hola, sou artisan! Tú asistente digital de la Cooperativa Artesanos.\n \n📌Por favor, ingresa un numero #️⃣ para recibir información.",
+                "buttons": [
+                    {
+                        "type": "postback",
+                        "title": "Consulta de Saldos ❔",
+                        "payload": "consulta_saldos"
+                    },
+                    {
+                        "type": "postback",
+                        "title": "Ubicación del local. 📍",
+                        "payload": "ubicacion_local"
+                    },
+                    // Add more button options as needed
+                ]
             }
         });
         
+        
 
     }else{
-        console.log("existe")
+        var data = JSON.stringify({
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "template",
+            "template": {
+                "template_type": "button",
+                "text": "🚀 Hola, sou artisan! Tú asistente digital de la Cooperativa Artesanos.\n \n📌Por favor, ingresa un numero #️⃣ para recibir información.",
+                "buttons": [
+                    {
+                        "type": "postback",
+                        "title": "Consulta de Saldos ❔",
+                        "payload": "consulta_saldos"
+                    },
+                    {
+                        "type": "postback",
+                        "title": "Ubicación del local. 📍",
+                        "payload": "ubicacion_local"
+                    },
+                    // Add more button options as needed
+                ]
+            }
+        });
+        
     }
 
 

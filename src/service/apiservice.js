@@ -40,22 +40,26 @@ const users = new Keyv();
             "to": number,
             "type": "interactive",
             "interactive": {
-                "type": "list",
-                "list": [
-                    {
-                        "title": "Consulta de Saldos ❔",
-                        "description": "Obtener información sobre saldos.",
-                        "payload": "consulta_saldos"
-                    },
-                    {
-                        "title": "Ubicación del local. 📍",
-                        "description": "Ver la ubicación de nuestro local.",
-                        "payload": "ubicacion_local"
-                    },
-                    // Add more button options as needed
-                ]
+                "type": "button",
+                "button": {
+                    "text": "🚀 Hola, sou artisan! Tú asistente digital de la Cooperativa Artesanos.\n \n📌Por favor, ingresa un numero #️⃣ para recibir información.",
+                    "buttons": [
+                        {
+                            "type": "text",
+                            "text": "Consulta de Saldos ❔",
+                            "payload": "consulta_saldos"
+                        },
+                        {
+                            "type": "text",
+                            "text": "Ubicación del local. 📍",
+                            "payload": "ubicacion_local"
+                        },
+                        // Add more button options as needed
+                    ]
+                }
             }
         });
+        
 
     }else{
         console.log("existe")

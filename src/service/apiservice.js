@@ -9,12 +9,6 @@ const users = new Keyv();
 
 
 
-    try {
-        currentUser = await users.get(number);
-        console.log("Current user:", currentUser);
-      } catch (error) {
-        console.error("Error retrieving user:", error);
-      }
 
 
    

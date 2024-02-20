@@ -21,12 +21,16 @@ const users = new Keyv();
 
     texto = texto.toLowerCase();
     let currentUser = await  users.get(number);
- console.log("----");
- console.log(currentUser);
+
 
     if (currentUser ==undefined) {
          users.set(number, ["root"], ttl);
      
+
+
+
+
+
 
          var data = JSON.stringify({
             "messaging_product": "whatsapp",
@@ -43,49 +47,35 @@ const users = new Keyv();
                     {
                       "type": "reply",
                       "reply": {
-                        "id": "UNIQUE_BUTTON_ID_1",
-                        "title": "BUTTON_TITLE_1"
+                        "id": "btnCuentas",
+                        "title": "CUENTAS"
                       }
                     },
                     {
                       "type": "reply",
                       "reply": {
-                        "id": "UNIQUE_BUTTON_ID_2",
-                        "title": "BUTTON_TITLE_2"
+                        "id": "btnTarjetasCredito",
+                        "title": "TARJETAS DE CREDITO"
+                      }
+                    },
+                    {
+                      "type": "reply",
+                      "reply": {
+                        "id": "btnCredito",
+                        "title": "CREDITO"
                       }
                     }
                   ]
                 }
               }
         });
+
         
         
 
     }else{
-        var data = JSON.stringify({
-            "messaging_product": "whatsapp",
-            "recipient_type": "individual",
-            "to": number,
-            "type": "template",
-            "template": {
-                "template_type": "button",
-                "text": "🚀 Hola, sou artisan! Tú asistente digital de la Cooperativa Artesanos.\n \n📌Por favor, ingresa un numero #️⃣ para recibir información.",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Consulta de Saldos ❔",
-                        "payload": "consulta_saldos"
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Ubicación del local. 📍",
-                        "payload": "ubicacion_local"
-                    },
-                    // Add more button options as needed
-                ]
-            }
-        });
-        
+   
+        console.log(texto);
     }
 
 

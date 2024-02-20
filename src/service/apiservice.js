@@ -32,24 +32,31 @@ const users = new Keyv();
             "messaging_product": "whatsapp",
             "recipient_type": "individual",
             "to": number,
-            "type": "template",
-            "template": {
-                "template_type": "button",
-                "text": "🚀 Hola, sou artisan! Tú asistente digital de la Cooperativa Artesanos.\n \n📌Por favor, ingresa un numero #️⃣ para recibir información.",
-                "buttons": [
+            "type": "interactive",
+            "interactive": {
+                "type": "button",
+                "body": {
+                  "text": "BUTTON_TEXT"
+                },
+                "action": {
+                  "buttons": [
                     {
-                        "type": "postback",
-                        "title": "Consulta de Saldos ❔",
-                        "payload": "consulta_saldos"
+                      "type": "reply",
+                      "reply": {
+                        "id": "UNIQUE_BUTTON_ID_1",
+                        "title": "BUTTON_TITLE_1"
+                      }
                     },
                     {
-                        "type": "postback",
-                        "title": "Ubicación del local. 📍",
-                        "payload": "ubicacion_local"
-                    },
-                    // Add more button options as needed
-                ]
-            }
+                      "type": "reply",
+                      "reply": {
+                        "id": "UNIQUE_BUTTON_ID_2",
+                        "title": "BUTTON_TITLE_2"
+                      }
+                    }
+                  ]
+                }
+              }
         });
         
         
